@@ -50,16 +50,17 @@ var ArmedButton = new Class({
 	build: function(){
 		text = this.options.text || this.element.get('html');
 		this.element.set('html', '');
-		this.element.adopt(Elements.from('<div class="armed-label"></div><div class="armed-controls"></div>'));
+		this.element.adopt(Elements.from('<div class="armed-label"></div><div class="armed-controls row"><div class="col-xs-6 col-armed-confirm"></div><div class="col-xs-6 col-armed-cancel"></div></div>'));
 		this.label = this.element.getElement('.armed-label');
 		this.label.set('html', text);
 		if(!this.element.hasClass('disabled') && !this.element.get('disabled')){
 			this.controls = this.element.getElement('.armed-controls');
-			this.controls.adopt(new Element('button', Object.merge({
+
+			this.controls.getElement('.col-armed-confirm').adopt(new Element('button', Object.merge({
 				'class': 	'armed-confirm btn btn-sm btn-success'
 			}, this.options.btnConfirm)));
 
-			this.controls.adopt(new Element('button', Object.merge({
+			this.controls.getElement('.col-armed-cancel').adopt(new Element('button', Object.merge({
 				'class': 	'armed-cancel btn btn-sm btn-default'
 			}, this.options.btnCancel)));
 
