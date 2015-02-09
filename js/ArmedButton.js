@@ -24,6 +24,8 @@ var ArmedButton = new Class({
 
 	options: {
 		element : null,
+		from_color: '#d2322d',
+		to_color: '#ff8a86',
 
 		fxOptions: {
 			effect		: 'Tween',
@@ -70,7 +72,7 @@ var ArmedButton = new Class({
 
 		this.element.addEvent('click', function(e){
 			e.preventDefault();
-			if(this.element.retrieve('armed') && (!e.target.match('button')))
+			if(this.element.hasClass('armed') && (!e.target.match('button')))
 				return false;
 			this.arm();
 		}.bind(this));
@@ -91,8 +93,8 @@ var ArmedButton = new Class({
 		this.fx.start(100, 0);
 		this.element.addClass('btn-danger');
 		this.element.removeClass('btn-primary');
-		this.flashing = this.element.flash('#d2322d', '#ff8a86', 100, 'background-color', 500);
-		this.element.store('armed', true);
+		this.flashing = this.element.flash(this.options.from_color, this.options.to_color, 100, 'background-color', 500);
+		this.element.addClass('armed');
 	},
 
 	disarm: function(classes){
@@ -109,7 +111,7 @@ var ArmedButton = new Class({
 			}
 			else this.element.addClass(this.element.retrieve('original_classes'));
 		}.bind(this),300);
-		this.element.store('armed', false);
+		this.element.removeClass('armed');
 	}
 });
 

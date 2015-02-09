@@ -7,11 +7,11 @@
 	padding: 0!important;
 }
 
-.btn-armed:hover, .btn-armed:focus
+.btn-armed:hover, .btn-armed:focus, .btn-armed.armed
 {
 	color: #fff !important;
 	background-color: #0d6a98;
-	border: none!important;
+	outline-style:none!important;
 }
 
 .btn-armed .armed-label, .btn-armed .armed-controls
@@ -30,4 +30,5 @@
 
 .btn-armed .armed-controls button {
 	display: inline-block;
+	outline-style:none!important;
 }
