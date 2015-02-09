@@ -3,25 +3,12 @@
 version: 0.3
 description: JavaScript version of the proverbial 'Big Red Button' to confirm or cancel an action once 'armed'
 requires:
-- MooTools 1.5.0+, 
-- Core/Class.Extras
-- Core/Element.Event
-- More/Events.Pseudos
-- Element.Data
-- provides: [ArmedButton, Element.flash]
+- core/Class.Extras
+- core/Element.Event
+- more/Events.Pseudos
+- core/Element.Data
+provides: [ArmedButton, Element.flash]
 authors: Eugene Trotsan <eugene@anthill.hk> - http://anthill.hk
-
-Usage:
-
-new ArmedButton(element, {
-	btnConfirm: {
-		text: 'Confirm',
-		onConfirm: function(instance) {}
-	},
-	btnCancel: {
-		text: 'Cancel',
-	}
-});
 */
 
 var ArmedButton = new Class({
