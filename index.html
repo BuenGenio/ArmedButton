@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Armedbutton : An pulsating confirmation safety button ">
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="Armedbutton : An pulsating confirmation safety button ">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/bootstrap.css">
+	<script src="javascripts/MooTools-Core-1.5.1.js"></script>
+	<script src="javascripts/MooTools-More-1.5.1.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/ArmedButton.css">
+	<script src="javascripts/ArmedButton.js"></script>
+	<title>Armedbutton</title>
+</head>
 
-    <title>Armedbutton</title>
-  </head>
+<body>
 
-  <body>
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+			<a id="forkme_banner" href="https://github.com/BuenGenio/ArmedButton">View on GitHub</a>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/BuenGenio/ArmedButton">View on GitHub</a>
+			<h1 id="project_title">Armedbutton</h1>
+			<h2 id="project_tagline">An pulsating confirmation safety button </h2>
 
-          <h1 id="project_title">Armedbutton</h1>
-          <h2 id="project_tagline">An pulsating confirmation safety button </h2>
+			<section id="downloads">
+				<a class="zip_download_link" href="https://github.com/BuenGenio/ArmedButton/zipball/master">Download this project as a .zip file</a>
+				<a class="tar_download_link" href="https://github.com/BuenGenio/ArmedButton/tarball/master">Download this project as a tar.gz file</a>
+			</section>
+		</header>
+	</div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/BuenGenio/ArmedButton/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/BuenGenio/ArmedButton/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+	<!-- MAIN CONTENT -->
+	<div id="main_content_wrap" class="outer">
+		<section id="main_content" class="inner">
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        
 
-<h1>
-<a id="what-is-armedbutton" class="anchor" href="#what-is-armedbutton" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is ArmedButton?</h1>
+			<h1>
+				<a id="what-is-armedbutton" class="anchor" href="#what-is-armedbutton" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is ArmedButton?</h1>
 
-<p>A fun-looking confirmation button that looks like and acts like the prototypical "Big red button" that lets you confirm an action before you do it, just to be safe.</p>
+				<p>A fun-looking confirmation button that looks like and acts like the prototypical "Big red button" that lets you confirm an action before you do it, just to be safe.</p>
 
-<h1>
-<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h1>
+				<h1>
+					<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h1>
 
-<p>ArmedButton is based on MooTools (because it's far from dead, and I think it's awesome!) and Bootstrap.</p>
-      </section>
-    </div>
+					<p>ArmedButton is based on MooTools (because it's far from dead, and I think it's awesome!) and Bootstrap.</p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Armedbutton maintained by <a href="https://github.com/BuenGenio">BuenGenio</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+					<button 
+							href="#" 
+							class="btn btn-default btn-block btn-armed armable">
+						Just do it!
+					</button>
 
-    
+				</section>
+			</div>
 
-  </body>
+			<!-- FOOTER  -->
+			<div id="footer_wrap" class="outer">
+				<footer class="inner">
+					<p class="copyright">Armedbutton maintained by <a href="https://github.com/BuenGenio">BuenGenio</a></p>
+					<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+				</footer>
+			</div>
+			<script type="text/javascript">
+				window.addEvent('domready', function(e){
+					$$('.armable').armed({
+						text: "Confirm",
+						btnConfirm: {
+							text: 'Confirm action',
+							onConfirm: function(instance){
+
+								alert("Confirmed!");
+								instance.label.set('text', 'Action completed!');
+								instance.disarm('btn btn-armed btn-block btn-success disabled');
+
+							}
+						},
+						btnCancel: {
+							text: 'Cancel'
+						},
+
+						fxOptions: {
+							transition: 'pow:out',
+							duration: 700
+						}
+					});
+				});
+			</script>
+
+
+</body>
 </html>

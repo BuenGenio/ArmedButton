@@ -1,0 +1,34 @@
+.btn-armed
+{
+	white-space: nowrap;
+	overflow: hidden;
+	background-color: #0088cc;
+	color: #fff;
+	padding: 0!important;
+}
+
+.btn-armed:hover, .btn-armed:focus, .btn-armed.armed
+{
+	color: #fff !important;
+	background-color: #0d6a98;
+	outline-style:none!important;
+}
+
+.btn-armed .armed-label, .btn-armed .armed-controls
+{
+	width: 100%;
+	line-height: 30px;
+	height:30px;
+	margin-top: 5px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.btn-armed .armed-controls button:first-child {
+	margin-right: 20px;
+}
+
+.btn-armed .armed-controls button {
+	display: inline-block;
+	outline-style:none!important;
+}
