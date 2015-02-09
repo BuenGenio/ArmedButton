@@ -1,6 +1,6 @@
 /*
 ---
-author: Eugene Trotsan <eugene@anthill.hk> - http://anthill.hk
+authors: Eugene Trotsan <eugene@anthill.hk> - http://anthill.hk
 version: 0.3
 description: JavaScript version of the proverbial 'Big Red Button' to confirm or cancel an action once 'armed'
 requires:
