@@ -4,6 +4,7 @@ The proverbial 'Big Red Button' made with MooTools & Bootstrap 3. When activated
 
 How to use
 ----------
+```js
 new ArmedButton(element, {
         btnConfirm: {
                 text: 'Confirm',
@@ -13,7 +14,7 @@ new ArmedButton(element, {
                 text: 'Cancel',
         }
 });
-
+```
 Demo
 ---------
 (https://buengenio.github.io/ArmedButton/)
