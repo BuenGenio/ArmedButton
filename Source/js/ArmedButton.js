@@ -1,12 +1,17 @@
-/**
- * @version			1.0.0
- * @package			ArmedButton
- * @description		Creates a flashing safety button with a choice of options when 'armed'
- * @requires		[MooTools 1.4+, Core/Class.Extras, Core/Element.Event, More/Events.Pseudos, /Element.Data]
- * @provides 		[ArmedButton, Element.flash]
- * @author 			Eugene Trotsan <eugene@bcp.im> - http://www.bcp.im
+/*
+--
+version: 0.3
+description: JavaScript version of the proverbial 'Big Red Button' to confirm or cancel an action once 'armed'
+requires:
+- MooTools 1.5.0+, 
+- Core/Class.Extras
+- Core/Element.Event
+- More/Events.Pseudos
+- Element.Data
+- provides: [ArmedButton, Element.flash]
+authors: Eugene Trotsan <eugene@anthill.hk> - http://anthill.hk
 
-Usage: 
+Usage:
 
 new ArmedButton(element, {
 	btnConfirm: {

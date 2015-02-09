@@ -1,3 +1,5 @@
 # ArmedButton
-'Armable' confirmation button, with sliding activation and strobing effect during selection of either to confirm or cancel an action.
-Depends on MooTools 1.4/1.5+ and Bootstrap 3.0.
+The proverbial 'Big Red Button' made with MooTools & Bootstrap 3. When activated flashes and asks to confirm or cancel an action. Requires MooTools 1.5+ / Bootstrap 3+;
+
+# Demo
+http://buengenio.github.io/ArmedButton/
