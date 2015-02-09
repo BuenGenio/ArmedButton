@@ -9,6 +9,7 @@ requires:
 - more/Events.Pseudos
 - core/Element.Data
 provides: [ArmedButton, Element.flash]
+demo: https://buengenio.github.io/ArmedButton/
 ...
 */
 

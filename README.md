@@ -16,4 +16,4 @@ new ArmedButton(element, {
 
 Demo
 ---------
-https://buengenio.github.io/ArmedButton/
+(https://buengenio.github.io/ArmedButton/)
