@@ -9,6 +9,7 @@ requires:
 - core/Element.Data
 provides: [ArmedButton, Element.flash]
 authors: Eugene Trotsan <eugene@anthill.hk> - http://anthill.hk
+...-
 */
 
 .btn-armed
