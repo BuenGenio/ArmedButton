@@ -1,6 +1,6 @@
 author: BuenGenio
 name: ArmedButton
-category: [Interface, Widgets]
+category: Widgets
 tags: [confirmation, dialog, button]
 demo: https://buengenio.github.io/ArmedButton/
 current: 0.2
