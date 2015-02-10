@@ -5,7 +5,7 @@ The proverbial 'Big Red Button' made with MooTools & Bootstrap 3. When activated
 
 How to use
 ----------
-# create your button:
+// create your button:
 ```html
 <button 
   href="#" 
@@ -13,7 +13,7 @@ How to use
     Just do it!
 </button>
 ```
-# initialise it:
+// initialise it:
 ```js
 window.addEvent('domready', function(e){
   $$('.armable').armed({
@@ -37,6 +37,7 @@ window.addEvent('domready', function(e){
   });
 });
 ```
+
 Demo
 ---------
 https://buengenio.github.io/ArmedButton/
